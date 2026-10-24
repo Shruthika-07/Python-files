@@ -1,0 +1,54 @@
+students={}
+def add_student():
+    roll=input('Enter roll number')
+    name=input("Enter name")
+    dept=input('Enter department')
+    students[roll]={'Name':name,'Department':dept}
+    print('student added successfully')
+def view_students():
+    if not students:
+        print('No student record found')
+        return
+    print('\n---Student Record---')
+    for i,j in students.items():
+        print("Roll no:",i,'|Name:',j['Name'],'|Department:',j['Department'])
+def search_student():
+    roll=input('Enter roll no to search' )
+    if roll in students:
+        print(students[roll])
+    else:
+        print('student not found')
+def delete_student():
+    roll=input('enter roll to delete')
+    if roll in students:
+        print(students[roll])
+    else:
+        print('student not found')
+def delete_student():
+    roll=input('enter roll to delete')
+    if roll in students:
+        del students[roll]
+        print('student deleted successfully')
+    else:
+        print("student not found")
+while True:
+    print('\n1.Add student')
+    print('2.view students ')
+    print('3.search student ')
+    print('4.delete student')
+    print('5. exit')
+    choice=input("Enter your choice")
+    if choice=='1':
+        add_student()
+    elif choice=='2':
+        view_students()
+    elif choice=='3':
+        search_student()
+    elif choice=='4':
+        delete_student()
+    elif choice=='5':
+        print("exiting....")
+        break
+    else:
+        print('Invalid choice')
+        break

@@ -1,0 +1,31 @@
+name=(input("enter student name"))
+n=int(input("enter no of subjects"))
+t=0
+for i in range(1,n+1):
+    m=float(input("enter mark of subject{i}"))
+    t=t+m
+p=t/n
+if p>=90:
+    grade='A+'
+    performance='out standing'
+elif p>=80:
+    grade='A'
+    performance='Excellent'
+elif p>=70:
+    grade='B'
+    performance='Very good'
+elif p>=60:
+    grade='c'
+    performance='good'
+elif p>=50:
+    grade='D'
+    performance='Average'
+else:
+    grade='F'
+    performance='Need improvement'
+print('\n----Academic Performance----')
+print('Student Name:',name)
+print('total marks:',t)
+print('percentage:',p)
+print('grade:',grade)
+print('performance:',performance)

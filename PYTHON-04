@@ -1,0 +1,13 @@
+n=input("enter name")
+a=int(input("enter age"))
+b=int(input('enter marks'))
+if b>=85:
+    s='schlorship approved'
+elif b>=60:
+    s='good performance'
+else:
+    s='need improvement'
+print(f"name:{n}")
+print(f"age:{a}")
+print(f"marks:{b}")
+print(f"status:{s}")
